@@ -18,16 +18,6 @@ namespace Psr\Log {
     type LogLevelString = 'emergency'|'alert'|'critical'|'error'|'warning'|'notice'|'info'|'debug';
 
     /**
-     * Overlay: `LoggerAwareTrait::setLogger()` returns void, matching the interface.
-     * Layer 1 harvested `mixed` because the trait method has no return type.
-     */
-    // @overlay-against: trait LoggerAwareTrait
-    partial trait LoggerAwareTrait {
-        // @overlay-against: function setLogger(\Psr\Log\LoggerInterface $logger): mixed
-        public function setLogger(\Psr\Log\LoggerInterface $logger): void;
-    }
-
-    /**
      * Overlay: `$level` is narrowed from Layer 1 `mixed` to `LogLevelString`;
      * `$context` is a string-keyed map.
      */

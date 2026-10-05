@@ -27,8 +27,6 @@ namespace Psr\Log {
         /**
         * Sets a logger instance on the object.
         *
-        * @param \Psr\Log\LoggerInterface $logger
-        * @return void
         * @generated
         */
         public function setLogger(\Psr\Log\LoggerInterface $logger): void;
@@ -42,17 +40,15 @@ namespace Psr\Log {
         /**
         * The logger instance.
         *
-        * @var ?\Psr\Log\LoggerInterface
         * @generated
         */
         protected ?\Psr\Log\LoggerInterface $logger;
         /**
         * Sets a logger.
         *
-        * @param \Psr\Log\LoggerInterface $logger
         * @generated
         */
-        public function setLogger(\Psr\Log\LoggerInterface $logger): mixed;
+        public function setLogger(\Psr\Log\LoggerInterface $logger): void;
     }
     /**
     * Describes a logger instance.
@@ -71,13 +67,12 @@ namespace Psr\Log {
     *
     * @generated
     */
-    interface LoggerInterface {
+    interface LoggerInterface
+    {
         /**
         * System is unusable.
         *
-        * @param string|\Stringable $message
         * @param array $context
-        * @return void
         * @generated
         */
         public function emergency(string|\Stringable $message, array $context = []): void;
@@ -87,9 +82,7 @@ namespace Psr\Log {
         * Example: Entire website down, database unavailable, etc. This should
         * trigger the SMS alerts and wake you up.
         *
-        * @param string|\Stringable $message
         * @param array $context
-        * @return void
         * @generated
         */
         public function alert(string|\Stringable $message, array $context = []): void;
@@ -98,9 +91,7 @@ namespace Psr\Log {
         *
         * Example: Application component unavailable, unexpected exception.
         *
-        * @param string|\Stringable $message
         * @param array $context
-        * @return void
         * @generated
         */
         public function critical(string|\Stringable $message, array $context = []): void;
@@ -109,9 +100,7 @@ namespace Psr\Log {
         *
         * be logged and monitored.
         *
-        * @param string|\Stringable $message
         * @param array $context
-        * @return void
         * @generated
         */
         public function error(string|\Stringable $message, array $context = []): void;
@@ -121,18 +110,14 @@ namespace Psr\Log {
         * Example: Use of deprecated APIs, poor use of an API, undesirable things
         * that are not necessarily wrong.
         *
-        * @param string|\Stringable $message
         * @param array $context
-        * @return void
         * @generated
         */
         public function warning(string|\Stringable $message, array $context = []): void;
         /**
         * Normal but significant events.
         *
-        * @param string|\Stringable $message
         * @param array $context
-        * @return void
         * @generated
         */
         public function notice(string|\Stringable $message, array $context = []): void;
@@ -141,18 +126,14 @@ namespace Psr\Log {
         *
         * Example: User logs in, SQL logs.
         *
-        * @param string|\Stringable $message
         * @param array $context
-        * @return void
         * @generated
         */
         public function info(string|\Stringable $message, array $context = []): void;
         /**
         * Detailed debug information.
         *
-        * @param string|\Stringable $message
         * @param array $context
-        * @return void
         * @generated
         */
         public function debug(string|\Stringable $message, array $context = []): void;
@@ -160,9 +141,7 @@ namespace Psr\Log {
         * Logs with an arbitrary level.
         *
         * @param mixed $level
-        * @param string|\Stringable $message
         * @param array $context
-        * @return void
         * @throws \Psr\Log\InvalidArgumentException
         * @generated
         */
@@ -183,9 +162,6 @@ namespace Psr\Log {
         /**
         * System is unusable.
         *
-        * @param string|\Stringable $message
-        * @param array $context
-        * @return void
         * @generated
         */
         public function emergency(string|\Stringable $message, array $context = []): void;
@@ -195,9 +171,6 @@ namespace Psr\Log {
         * Example: Entire website down, database unavailable, etc. This should
         * trigger the SMS alerts and wake you up.
         *
-        * @param string|\Stringable $message
-        * @param array $context
-        * @return void
         * @generated
         */
         public function alert(string|\Stringable $message, array $context = []): void;
@@ -206,9 +179,6 @@ namespace Psr\Log {
         *
         * Example: Application component unavailable, unexpected exception.
         *
-        * @param string|\Stringable $message
-        * @param array $context
-        * @return void
         * @generated
         */
         public function critical(string|\Stringable $message, array $context = []): void;
@@ -217,9 +187,6 @@ namespace Psr\Log {
         *
         * be logged and monitored.
         *
-        * @param string|\Stringable $message
-        * @param array $context
-        * @return void
         * @generated
         */
         public function error(string|\Stringable $message, array $context = []): void;
@@ -229,18 +196,12 @@ namespace Psr\Log {
         * Example: Use of deprecated APIs, poor use of an API, undesirable things
         * that are not necessarily wrong.
         *
-        * @param string|\Stringable $message
-        * @param array $context
-        * @return void
         * @generated
         */
         public function warning(string|\Stringable $message, array $context = []): void;
         /**
         * Normal but significant events.
         *
-        * @param string|\Stringable $message
-        * @param array $context
-        * @return void
         * @generated
         */
         public function notice(string|\Stringable $message, array $context = []): void;
@@ -249,18 +210,12 @@ namespace Psr\Log {
         *
         * Example: User logs in, SQL logs.
         *
-        * @param string|\Stringable $message
-        * @param array $context
-        * @return void
         * @generated
         */
         public function info(string|\Stringable $message, array $context = []): void;
         /**
         * Detailed debug information.
         *
-        * @param string|\Stringable $message
-        * @param array $context
-        * @return void
         * @generated
         */
         public function debug(string|\Stringable $message, array $context = []): void;
@@ -268,9 +223,6 @@ namespace Psr\Log {
         * Logs with an arbitrary level.
         *
         * @param mixed $level
-        * @param string|\Stringable $message
-        * @param array $context
-        * @return void
         * @throws \Psr\Log\InvalidArgumentException
         * @generated
         */
@@ -305,10 +257,7 @@ namespace Psr\Log {
         /**
         * Logs with an arbitrary level.
         *
-        * @param mixed $level
-        * @param string|\Stringable $message
         * @param array $context
-        * @return void
         * @throws \Psr\Log\InvalidArgumentException
         * @generated
         */
